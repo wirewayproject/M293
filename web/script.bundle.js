@@ -1,14 +1,3 @@
-fetch('settings.json')
-    .then(response => response.json())
-    .then(data => {
-        if (!data.webHookUrl) {
-            document.getElementById('content').innerHTML = 'This site is not configured. Please contact the administrator.<br>Tip: Edit settings.json to add your webhook URL.';
-            document.getElementsByClassName('headerActions')[0].style.display = 'none';
-        }
-    })
-    .catch(error => console.error('Error:', error));
-
-
 async function submitFeedback(event) {
     event.preventDefault();
 

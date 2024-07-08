@@ -8,5 +8,12 @@
     "short_name": "Music Player",
     "start_url": "/app/",
     "theme_color": "#000000",
-    "id": "musicplayer"
+    "id": "musicplayer",
+    "icons": [
+      {
+        "src": "pwa.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
   }

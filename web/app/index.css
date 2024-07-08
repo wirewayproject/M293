@@ -162,3 +162,13 @@ input[type="text"] {
 .playButton:hover {
     cursor: pointer;
 }
+
+/* Media queries */
+@media (max-width: 800px) {
+    .progressBarContent {
+        display: none;
+    }
+    .music-item {
+        width: 100%;
+    }
+}

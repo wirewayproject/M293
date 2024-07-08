@@ -75,16 +75,16 @@ body {
     /* Higher z-index to display above shadowContent */
 }
 
-.text-content {
+.text-content, .text-content-feedback {
     width: 60%;
 }
 
-.text-content h1 {
+.text-content, .text-content-feedback h1 {
     font-size: 2em;
     margin-bottom: 10px;
 }
 
-.text-content p {
+.text-content, .text-content-feedback p {
     font-size: 1em;
     line-height: 1.5;
 }
@@ -271,4 +271,17 @@ body {
 
 .feedback-form button:hover {
     background: rgba(0, 0, 0, 0.6);
+}
+
+/* Media queries */
+@media (max-width: 800px) {
+    .title h1 {
+        display: none;
+    }
+    .image-content {
+        display: none;
+    }
+    .text-content-feedback {
+        display: none;
+    }
 }

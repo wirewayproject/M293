@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
+    <title>Simple Music Player</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://autoajax.wireway.ch/autoajax.js"></script>
+    <script src="script.bundle.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <img src="logo.svg" alt="logo">
+                <h1>Simple Music Player</h1>
+            </div>
+            <div class="headerActions">
+                <div class="feedbackButton" onclick="ajax('index.html')">
+                    Back
+                </div>
+                <div class="openButton" onclick="window.location.href= '/app';">
+                    <img src="website.svg" alt="Open">
+                    Open
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="innerContent" id="innerContent">
+                <div class="text-content">
+                    <h1>Feedback</h1>
+                    <p>We would be thrilled if you would leave us some feedback how we can make your experience better
+                    </p>
+                </div>
+                <form class="feedback-form">
+                    <input type="text" name="name" placeholder="Your Name">
+                    <input type="email" name="email" placeholder="Your Email">
+                    <textarea name="content" placeholder="Your Feedback"></textarea>
+                    <button type="submit" onclick="submitFeedback(event)">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="blobContainer">
+        <div id="blob" class="blob"></div>
+    </div>
+    <div id="loadingbar" style="display: none;position: absolute; top:15px;right:15px;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="margin: auto; display: block;" width="30px" height="30px" viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid">
+            <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="5" r="40"
+                stroke-dasharray="188.49555921538757 64.83185307179586">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite"
+                    dur="0.6097560975609756s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+            </circle>
+        </svg>
+    </div>
+</body>
+</html>

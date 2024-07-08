@@ -1,0 +1,12 @@
+{
+    "background_color": "#000000",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": "Music Player",
+    "orientation": "any",
+    "scope": "/",
+    "short_name": "Music Player",
+    "start_url": "/app/",
+    "theme_color": "#000000",
+    "id": "musicplayer"
+  }

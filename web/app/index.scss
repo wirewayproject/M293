@@ -37,13 +37,11 @@ input[type="text"] {
     width: 100%;
     height: 70vh;
     overflow-y: scroll;
-}
 
-.music-list::-webkit-scrollbar {
-    display: none;
-}
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
-.music-list {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -56,19 +54,19 @@ input[type="text"] {
     justify-content: flex-start;
     background-color: #121212;
     transition: 500ms;
-}
 
-.music-item:hover {
-    background-color: #313131;
-    transition: 500ms;
-}
+    &:hover {
+        background-color: #313131;
+        transition: 500ms;
+    }
 
-.music-item img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    border-radius: 5px;
-    pointer-events: none;
+    img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 5px;
+        pointer-events: none;
+    }
 }
 
 .music-info {
@@ -78,24 +76,23 @@ input[type="text"] {
     width: 100%;
     pointer-events: none;
     align-items: center;
-}
 
-.music-info strong {
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    strong {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-}
+    span {
+        flex: 1;
+        text-align: center;
+        pointer-events: all;
 
-.music-info span {
-    flex: 1;
-    text-align: center;
-    pointer-events: all;
-}
-
-.music-info span:last-child {
-    text-align: right;
+        &:last-child {
+            text-align: right;
+        }
+    }
 }
 
 .linkElement {
@@ -122,32 +119,31 @@ input[type="text"] {
     flex-direction: row;
     user-select: none;
     padding-right: 50px;
-}
 
-.playBar .coverImage {
-    height: 100%;
-    border-radius: 4px;
-}
+    .coverImage {
+        height: 100%;
+        border-radius: 4px;
+    }
 
-.playBar .progressBarContent {
-    width: 50%;
+    .progressBarContent {
+        width: 50%;
+    }
 
-}
+    .progressBarBg {
+        width: 50%;
+        height: 5px;
+        border-radius: 16px;
+        background-color: grey;
+        position: absolute;
+    }
 
-.playBar .progressBarBg {
-    width: 50%;
-    height: 5px;
-    border-radius: 16px;
-    background-color: grey;
-    position: absolute;
-}
-
-.playBar .progressBar {
-    width: 0%;
-    height: 5px;
-    border-radius: 16px;
-    background-color: white;
-    position: absolute;
+    .progressBar {
+        width: 0%;
+        height: 5px;
+        border-radius: 16px;
+        background-color: white;
+        position: absolute;
+    }
 }
 
 .controlls {
@@ -157,10 +153,10 @@ input[type="text"] {
 .playButton {
     pointer-events: all;
     text-decoration: none;
-}
 
-.playButton:hover {
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 /* Media queries */

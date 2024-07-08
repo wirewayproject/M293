@@ -15,12 +15,21 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 4823;
 require('dotenv').config();
+root = process.cwd()+"/web";
+const compileSass = require('express-compile-sass');
 
 
 const webhookUrl = process.env.WEBHOOK_URL;
-
+console.log(root)
 app.use(express.json());
 
+app.use(compileSass({
+    root: root,
+    sourceMap: true,
+    sourceComments: true,
+    watchFiles: true,
+    logToConsole: false
+}));
 
 app.use(express.static('web'));
 

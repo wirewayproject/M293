@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/app/index.css">
+    <script src="/app/index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input id="searchBar" type="text" placeholder="Search music...">
+        </div>
+        <ul class="music-list">
+            <p>Nothing here (yet)<br>
+                Press CTRL + K to search for a song.</p>
+        </ul>
+    </div>
+    <div id="playBar" class="playBar">
+        <img class="coverImage" id="playBarCoverImage" src="/app/empty.png" alt="Thumbnail">
+        <span class="title" id="playBarTitle">Nothing Playing</span>
+        <div class="progressBarContent">
+            <div class="progressBarBg"></div>
+            <div class="progressBar"></div>
+        </div>
+        <div class="controlls">
+            <div class="playButton" id="playButton">Play</div>
+        </div>
+    </div>
+</body>
+
+</html>

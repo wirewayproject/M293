@@ -79,7 +79,13 @@ function updateProgressBar(event) {
 
 document.querySelector('.playButton').addEventListener('click', function () {
     const playButton = document.querySelector('.playButton');
-    playButton.style.textDecoration = playButton.style.textDecoration === 'none' ? 'underline' : 'none';
+    if(audioPlayer.paused) {
+        audioPlayer.play();
+        playButton.style.textDecoration = 'underline'
+    } else {
+        audioPlayer.pause();
+        playButton.style.textDecoration = 'none'
+    }
 });
 
 
@@ -98,4 +104,6 @@ function playFromUrl(title, id) {
     audioPlayer.play();
     document.getElementById("playBarTitle").innerText = title;
     document.getElementById("playBarCoverImage").src = thumbnailUrl;
+    const playButton = document.querySelector('.playButton');
+    playButton.style.textDecoration = 'underline'
 }
